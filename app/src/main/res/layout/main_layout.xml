@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main_Activity">
+    <!--垂直线性布局-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="基于Socket数据通信"
+        android:textSize="33sp"
+        android:textColor="#00574B"
+        android:gravity="center_horizontal" />
+    <!--提示信息-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="客户端类型："
+        android:textSize="24sp"
+        android:textColor="#00574B"
+        android:paddingTop="33dp" />
+    <!--选择信息-->
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp">
+        <!--定义一组单选钮-->
+
+        <RadioButton
+            android:id="@+id/tcp_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TCP单播"
+            android:textSize="20sp"
+            android:textColor="#00574B" />
+        <!--定义TCP单选钮-->
+
+        <RadioButton
+            android:id="@+id/udp_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UDP多播"
+            android:textSize="20sp"
+            android:textColor="#00574B" />
+        <!--定义UDP单选钮-->
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/log" />
+    <!--图片填空-->
+
+</LinearLayout>

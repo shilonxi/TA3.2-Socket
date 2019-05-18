@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TCP_Activity">
+    <!--垂直线性布局-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TCP单播客户端"
+        android:textSize="24sp"
+        android:textColor="#00574B"
+        android:gravity="center_horizontal" />
+    <!--提示信息-->
+
+    <android.support.percent.PercentFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--百分比布局-->
+
+        <ScrollView
+            android:layout_gravity="left|top"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="90%">
+
+            <EditText
+                android:id="@+id/send_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="这里用于发送数据"
+                android:textSize="20sp"
+                android:textColor="#63a66c" />
+
+        </ScrollView>
+        <!--左半边用于发送-->
+
+        <ScrollView
+            android:layout_gravity="right|top"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="85%">
+
+            <EditText
+                android:id="@+id/receive_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="这里用于接收数据"
+                android:textSize="20sp"
+                android:textColor="#63a66c" />
+
+        </ScrollView>
+        <!--右半边用于接收-->
+
+        <Button
+            android:id="@+id/send_bt"
+            android:layout_gravity="left|bottom"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="10%"
+            android:text="send"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:background="#63a66c" />
+        <!--用于确认发送内容-->
+
+        <EditText
+            android:id="@+id/ip_edit"
+            android:layout_gravity="right|bottom"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="15%"
+            android:hint="目标IP地址"
+            android:textSize="16sp"
+            android:textColor="#63a66c"
+            android:imeOptions="actionSend" />
+        <!--用于确定目的地-->
+
+    </android.support.percent.PercentFrameLayout>
+
+</LinearLayout>
